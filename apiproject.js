@@ -46,14 +46,15 @@ function displayWorldTotals(world){
 function displayCountryTotals(e){
     e.preventDefault()
    let country = e.target[0].value;
-//   country[0].toUpperCase() //TURN FIRST TO UPPERCASE AUTO ??????????????????????????????????????
+   let capCountry = country.charAt(0).toUpperCase() + country.slice(1)
+   
 
 
     // console.log(countries);
 
     for (i=0; i<countries.length; i++){
         
-        if (country === countries[i].Country){
+        if (capCountry === countries[i].Country){
             console.log(countries[i])
 
     // Country Deaths (Total)
